@@ -18,18 +18,27 @@ const inventors = [
 // 1. Filter de lijst op uitvinders die geboren zijn in de 16e eeuw
 // Verwachte uitkomst:
 // [{ first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 }, { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 }]
-
+const sixteen = inventors.filter((inventor) => {
+      return inventor.year >= 1500 && inventor.year <= 1600;
+})
+console.log(sixteen);
 
 
 // 2. Maak een array met daarin alle geboortejaren van de uitvinders
 // Verwachte uitkomst: [1879, 1643, 1564, 1867, 1571, 1473, 1858, 1898, 1815, 1855, 1878, 1847];
-
+const invent = inventors.map((inventor) => {
+    return inventor.year
+})
+console.log(invent)
 
 
 // 3. Maak een array met daarin alle volledige namen van de uitvinders (dus voor- en achternaam als één string)
 // Verwachte uitkomst: [ 'Albert Einstein', 'Isaac Newton', 'Galileo Galilei', 'Marie Curie', 'Johannes Kepler', 'Nicolaus Copernicus', 'Max Planck', 'Katherine Blodgett', 'Ada Lovelace', 'Sarah E. Goode', 'Lise Meitner', 'Thomas Edison']
 
-
+const firstAndLastName = inventors.map((inventor) => {
+  return inventor.first + " " + inventor.last;
+})
+console.log(firstAndLastName)
 
 // 4. Sorteer de uitvinders op geboortejaar, oplopend van oudste naar jongste uitvinder
 // Verwachte uitkomst:
@@ -47,6 +56,11 @@ const inventors = [
 //   { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
 //   { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 }
 // ]
+
+const sort = inventors.sort((a,b) => {
+  return a.year - b.year;
+})
+console.log(sort)
 
 
 
@@ -68,7 +82,29 @@ const inventors = [
 // ]
 
 
+//[] -- function maken.
+//[] -- sort in functie verwerken.
+//[] -- Van hoog naar laag. Dus b,a
+//[] -- Door de array heen for-loopen.
+//[] -- Vergelijk year en passed met elkaar.
+//[] -- Uitkomst passed - year = leeftijd.
+//[] -- return leeftijd van hoog naar laag.
+const highestAge = inventors.sort((b,a) => {
+
+  return b.
+
+
+
+
+})
+console.log(highestAge)
+
 
 
 // 6. Vind de gegevens over de uitvinder wiens achternaam 'Edison' is.
 // Verwachte uitkomst: { first: 'Thomas', last: 'Edison', year: 1847, passed: 1931 }
+
+const edison = inventors.find((inventor) => {
+  return inventor.last === "Edison";
+})
+console.log(edison);
